@@ -38,7 +38,7 @@ namespace BD.Schemas
             int groupAmount = amount/100;
             
             int studentsInGroupAmount = amount/groupAmount;
-
+            var mark = new Random()
             for (var j = 1; j <= groupAmount; j++){
                 var groupId = j;
                 var groupName = "Group " + j;
@@ -53,8 +53,8 @@ namespace BD.Schemas
                     cmd.ExecuteNonQuery();
                     var studentId = cmd.LastInsertedId;
                     cmd.Dispose();
-                    var mark = (new Random()).Next(1, 6);
-                    sql = String.Format("INSERT INTO {0}  SET mark = {1}, student_id = {2};",table3,mark, studentId);
+                   
+                    sql = String.Format("INSERT INTO {0}  SET mark = {1}, student_id = {2};",table3, mark.Next(1, 6), studentId);
                     ExecuteNonQuery(sql);
                 }
             }
