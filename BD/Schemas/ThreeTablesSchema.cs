@@ -38,7 +38,7 @@ namespace BD.Schemas
             int groupAmount = amount/100;
             
             int studentsInGroupAmount = amount/groupAmount;
-            var mark = new Random()
+            var mark = new Random();
             for (var j = 1; j <= groupAmount; j++){
                 var groupId = j;
                 var groupName = "Group " + j;
