@@ -237,8 +237,8 @@ namespace BD
 
                     TimeSpan ts1 = stopWatch1.Elapsed;
                     sT1 += ts1.TotalMilliseconds;
-                    textBox1.AppendText(h + "\t");
-                    textBox1.AppendText(Math.Round(ts1.TotalMilliseconds, 0) + "\t");
+                 //   textBox1.AppendText(h + "\t");
+                   // textBox1.AppendText(Math.Round(ts1.TotalMilliseconds, 0) + "\t");
 
 
                     Stopwatch stopWatch2 = new Stopwatch();
@@ -257,16 +257,16 @@ namespace BD
                     sT2 += ts2.TotalMilliseconds;
 
 
-                    textBox1.AppendText(Math.Round(ts2.TotalMilliseconds, 0) + "\t");
-                    textBox1.AppendText(Math.Round((ts2.TotalMilliseconds - ts1.TotalMilliseconds), 0) + "\t");
-                    textBox1.AppendText(Math.Round((ts2.TotalMilliseconds - ts1.TotalMilliseconds) / (ts1.TotalMilliseconds / 100), 2) + "\n");
+                  //  textBox1.AppendText(Math.Round(ts2.TotalMilliseconds, 0) + "\t");
+                  //  textBox1.AppendText(Math.Round((ts2.TotalMilliseconds - ts1.TotalMilliseconds), 0) + "\t");
+                  //  textBox1.AppendText(Math.Round((ts2.TotalMilliseconds - ts1.TotalMilliseconds) / (ts1.TotalMilliseconds / 100), 2) + "\n");
 
 
                 }
                 textBox1.AppendText("сер \t");
-                textBox1.AppendText(Math.Round(sT1 / q) + "\t");
-                textBox1.AppendText(Math.Round(sT2 / q) + "\t");
-                textBox1.AppendText(Math.Round((sT2 - sT1) / q) + "\t");
+                textBox1.AppendText(sT1 / q + "\t");
+                textBox1.AppendText(sT2 / q + "\t");
+                textBox1.AppendText(sT2 - sT1 / q + "\t");
                 textBox1.AppendText(Math.Round((sT2 - sT1) / (sT1 / 100), 2) + "\n");
             }
             catch (Exception ex)
